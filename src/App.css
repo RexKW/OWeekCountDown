@@ -1,0 +1,872 @@
+@import url('https://fonts.cdnfonts.com/css/the-wildtern');
+
+.App {
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+p{
+
+font-family: 'ClementePDam', sans-serif;
+
+}
+
+
+
+.bg {
+  background: url(countdownBG.PNG);
+  background-position: 0% 60%;
+  background-size: 100% auto;
+  height: 100vh;
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.containerLogo img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+}
+
+#u {
+  position: absolute;
+  left: 15%;
+}
+
+#o {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  right: 10%;
+  top: 5%;
+}
+
+.containerLogo {
+  height: 70px;
+  width: 210px;
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  right: 1%;
+}
+
+.countdownContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 28vh;
+  z-index: 6;
+  height: 10vh;
+}
+
+.countdown{
+  position: absolute;
+}
+
+
+.OWEEK {
+  top: 8vh;
+  font-size: 70px;
+  z-index: 7;
+  background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+  border-radius: 15px;
+  color: rgb(255, 213, 61);
+  -webkit-text-stroke-width: 0.001px;
+  -webkit-text-stroke-color: rgb(228, 47, 30);
+  box-shadow: 5px 10px 18px rgb(255, 204, 0);
+  position: absolute;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  font-weight: bold;
+}
+
+
+
+.SOON {
+  top: 55%;
+  font-size: 100px;
+  background: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: rgb(220, 22, 0);
+  position: absolute;
+  font-weight: bold;
+  z-index: 6;
+}
+
+.darken {
+  background-color: #130f7554;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.outline {
+  width: 100%;
+  height: 300vh;
+  position: absolute;
+  top: 100vh;
+  justify-content: center;
+  display: flex;
+  background-image: url(./desktop\ bg-01.png);
+  background-size: 100% 300vh;
+}
+
+.outlineTransition {
+  position: absolute;
+  top: -45vh;
+  z-index: 5;
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(rgba(1,1,122,0), rgba(1,1,122,1), rgba(1,1,122,0));
+  font-weight: bold;
+}
+
+#leaf1 {
+  position: absolute;
+  top: 18vh;
+  left: -5%;
+  width: 75vw;
+  height: auto;
+  z-index: 9;
+
+}
+
+#leaf2 {
+  position: absolute;
+  top: 18vh;
+  right: -1%;
+  width: 75vw;
+  height: auto;
+  z-index: 9;
+
+}
+
+#leaf3{
+  width: 75vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carouselContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  top: -65vh;
+  left: 10%;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+#banner {
+  position: absolute;
+  top: -17.5%;
+  width: 70%;
+  height: 120vh;
+  z-index: 9;
+}
+
+#content1{
+  position: absolute;
+  height: 80%;
+  width: auto;
+  top: 6%;
+}
+
+#content2{
+  display: none;
+  position:absolute;
+  height: auto;
+  width: 90%;
+  top: 8%;
+  z-index: 9;
+}
+
+#firework1{
+  position: absolute;
+  z-index: 8;
+  left: 15vw;
+  top: 20vh;
+}
+
+#firework2{
+  position: absolute;
+  z-index: 8;
+  top: 30vh;
+  left: 90vw;
+
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes firework {
+  0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
+  50% { width: 0.5vmin; opacity: 1; }
+  100% { width: var(--finalSize); opacity: 0; }
+}
+
+/* @keyframes fireworkPseudo {
+  0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
+  50% { width: 0.5vmin; opacity: 1; }
+  100% { width: var(--finalSize); opacity: 0; }
+}
+ */
+.firework,
+.firework::before,
+.firework::after
+{
+  --initialSize: 0.5vmin;
+  --finalSize: 45vmin;
+  --particleSize: 0.2vmin;
+  --color1: yellow;
+  --color2: khaki;
+  --color3: white;
+  --color4: lime;
+  --color5: gold;
+  --color6: mediumseagreen;
+  --y: -30vmin;
+  --x: -50%;
+  --initialY: 60vmin;
+  content: "";
+  animation: firework 2s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, var(--y));
+  width: var(--initialSize);
+  aspect-ratio: 1;
+  background: 
+    /*
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 0%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 0%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 100%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 100%,
+    */
+    
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 50% 0%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%,
+    
+    /* bottom right */
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%,
+    
+    /* bottom left */
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%,
+    
+    /* top left */
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%,
+    
+    /* top right */
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42%
+    ;
+  background-size: var(--initialSize) var(--initialSize);
+  background-repeat: no-repeat;
+}
+
+.firework::before {
+  --x: -50%;
+  --y: -50%;
+  --initialY: -50%;
+/*   transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg); */
+  transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+/*   animation: fireworkPseudo 2s infinite; */
+}
+
+.firework::after {
+  --x: -50%;
+  --y: -50%;
+  --initialY: -50%;
+/*   transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg); */
+  transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+/*   animation: fireworkPseudo 2s infinite; */
+}
+
+.firework:nth-child(2) {
+  --x: 30vmin;
+}
+
+.firework:nth-child(2),
+.firework:nth-child(2)::before,
+.firework:nth-child(2)::after {
+  --color1: pink;
+  --color2: violet;
+  --color3: fuchsia;
+  --color4: orchid;
+  --color5: plum;
+  --color6: lavender;  
+  --finalSize: 40vmin;
+  left: 30%;
+  top: 60%;
+  animation-delay: -0.25s;
+}
+
+.firework:nth-child(3) {
+  --x: -30vmin;
+  --y: -50vmin;
+}
+
+.firework:nth-child(3),
+.firework:nth-child(3)::before,
+.firework:nth-child(3)::after {
+  --color1: cyan;
+  --color2: lightcyan;
+  --color3: lightblue;
+  --color4: PaleTurquoise;
+  --color5: SkyBlue;
+  --color6: lavender;
+  --finalSize: 35vmin;
+  left: 70%;
+  top: 60%;
+  animation-delay: -0.4s;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media(max-width:1400px){
+  .bg{
+    background-size: auto 100vh;
+    background-position: 52%;
+  }
+
+
+
+  .countdownContainer{
+    top: 30vh;
+  }
+
+  #leaf1{
+    left: -16%;
+    top: 44vh;
+  }
+
+  #leaf2{
+    right: -14%;
+    top: 44vh;
+  }
+
+  #content1{
+    display: none;
+  }
+
+  #content2{
+    display:inherit;
+    top: 15%;
+  }
+}
+
+
+
+@media(max-width:1280px) {
+  .bg{
+    background-size: 200vw 100vh;
+    background-position: 52%;
+  }
+
+
+
+  #banner{
+    top: -8%;
+    width: 100vw;
+    height: auto;
+  }
+
+
+  .countdownContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30vh;
+    z-index: 6;
+  }
+
+  .outline{
+    height: 360vh;
+    background-size: 100vw 360vh;
+  }
+
+  #leaf1 {
+    position: absolute;
+    top: 4vh;
+    left: -40%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+  
+  #leaf2 {
+    position: absolute;
+    top: 4vh;
+    right: -40%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+
+  #content1{
+    display: none;
+  }
+
+  #content2{
+    display:inherit;
+    top: 15%;
+  }
+
+  
+
+  
+}
+
+@media(max-width:1100px){
+  .countdownContainer{
+    top: 40vh;
+  }
+
+
+
+  #leaf1 {
+    position: absolute;
+    top: 42vh;
+    left: -24%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+  
+  #leaf2 {
+    position: absolute;
+    top: 39vh;
+    right: -22%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+
+  #banner{
+    top: -450px;
+  }
+
+}
+
+@media(max-width:920px){
+  .countdownContainer{
+    top: 40vh;
+  }
+
+
+  #leaf1 {
+    position: absolute;
+    top: 55vh;
+    left: -25%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+  
+  #leaf2 {
+    position: absolute;
+    top: 55vh;
+    right: -25%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+}
+
+@media(max-width:860px){
+
+
+  .countdownContainer{
+    top: 40vh;
+  }
+}
+
+@media(max-width:840px){
+
+
+  #banner{
+    top: -10%;
+    width: 100vw;
+    height: auto;
+  }
+
+  
+
+  .countdownContainer{
+    top: 40vh;
+  }
+
+  .outline {
+    background-image: url(./desktop\ bg-01.png);
+    height: 350vh;
+    background-size: 100% 350vh;
+  }
+
+  #leaf1 {
+    position: absolute;
+    top: 45vh;
+    left: -20%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+  
+  #leaf2 {
+    position: absolute;
+    top: 45vh;
+    right: -15%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  
+  }
+}
+
+@media(max-width:768px) {
+  .bg {
+    background-size: 250% 100%;
+    background-position: 52% 70%;
+  }
+
+
+
+  .SOON {
+    top: 65%;
+    -webkit-text-stroke-width: 1px;
+    font-size: 60px;
+  }
+
+  .outline {
+    background-image: url(./desktop\ bg-01.png);
+    height: 360vh;
+    background-size: 100% 360vh;
+  }
+
+  #content2{
+    top: 3%;
+  }
+
+  #banner {
+    display: initial;
+    position: absolute;
+    top: -11%;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .countdownContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40vh;
+  }
+
+  #u {
+    position: absolute;
+    left: -25%;
+    width: 60px;
+    height: auto;
+  }
+  
+  #o {
+    position: absolute;
+    right: -25%;
+    width: 58px;
+    height: auto;
+  }
+
+  .containerLogo {
+    height: 35px;
+    width: 106px;
+    position: absolute;
+    z-index: 6;
+    top: 2%;
+    right: 42%;
+  }
+
+  
+}
+
+@media(max-width:640px) {
+  .bg {
+    background: url(countdownBGPhone.PNG);
+    background-size: auto 100%;
+    background-position: center;
+  }
+
+  #leaf1 {
+    position: absolute;
+    top: 60vh;
+    left: -22%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  #leaf2 {
+    position: absolute;
+    top: 60vh;
+    right: -20%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  #leaf3{
+    top: 35%;
+    width: 200vw;
+    height: auto;
+    display: none;
+
+  }
+
+
+  .SOON {
+    top: 65%;
+    -webkit-text-stroke-width: 1px;
+    font-size: 40px;
+  }
+
+  .countdownContainer{
+    top: 40.5%;
+    z-index: 6;
+  }
+
+  #banner {
+    position: absolute;
+    top: -8%;
+    width: 100%;
+    height: 60vh;
+    z-index: 9;
+  }
+
+  #u {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: auto;
+  }
+  
+  #o {
+    position: absolute;
+    right: 0%;
+    width: 48px;
+    height: auto;
+  }
+
+  .containerLogo {
+    height: 35px;
+    width: 106px;
+    position: absolute;
+    z-index: 6;
+    top: 2%;
+    right: 37%;
+  }
+
+
+
+  
+  
+}
+
+@media(max-width:550px){
+  .countdownContainer{
+    top: 40vh;
+  }
+
+  
+  .containerLogo{
+    right: 35vw;
+  }
+
+  #leaf1 {
+    position: absolute;
+    top: 55vh;
+    left: -32%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  #leaf2 {
+    position: absolute;
+    top: 55vh;
+    right: -30%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  
+}
+
+@media(max-width:500px){
+  .countdownContainer{
+    top: 52vh;
+  }
+
+  #content2{
+    top: 5%;
+  }
+
+  .outline {
+    width: 100%;
+    height: 220vh;
+    position: absolute;
+    top: 100vh;
+    justify-content: center;
+    display: flex;
+    background-image: url(./desktop\ bg-01.png);
+    background-size: 100% 220vh;
+  }
+
+  #banner {
+    position: absolute;
+    top: -13%;
+    width: 100%;
+    height: 60vh;
+    z-index: 9;
+  }
+
+}
+
+@media(max-width:450px){
+  .countdownContainer{
+    top: 40vh;
+  }
+
+
+
+  #leaf1 {
+    position: absolute;
+    top: 68vh;
+    left: -35%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  #leaf2 {
+    position: absolute;
+    top: 68vh;
+    right: -30%;
+    width: 150vw;
+    height: auto;
+    z-index: 9;
+  }
+
+  .outline {
+    width: 100%;
+    height: 250vh;
+    position: absolute;
+    top: 100vh;
+    justify-content: center;
+    display: flex;
+    background-image: url(./desktop\ bg-01.png);
+    background-size: 100% 250vh;
+  }
+
+  #banner{
+    top: -12%;
+    width: 100%;
+  }
+
+
+}
+
+
+
+@media(max-width:415px){
+  .countdownContainer{
+    top: 40vh;
+  }
+
+
+
+
+}
+
+
+
+

@@ -1,0 +1,198 @@
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 21, 21, 0.44);
+    position: absolute;
+    z-index: 6;
+    width: 50%;
+    margin: 8%;
+    top: 36%;
+    border: 5px solid rgb(255, 218, 9);
+    border-radius: 15px;
+    box-shadow: 5px 10px 18px rgb(255, 204, 0);
+    
+}
+
+.oweekLogo{
+    font-size: 80px;
+    background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+  border-radius: 15px;
+  color: rgb(255, 213, 61);
+  -webkit-text-stroke-width: 0.001px;
+  -webkit-text-stroke-color: rgb(228, 47, 30);
+  box-shadow: 5px 10px 18px rgb(255, 204, 0);
+  position: absolute;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  font-weight: bold;
+  top: -75%;
+}
+
+.container p{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+}
+
+.divider{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.container{
+   padding: 2%;
+   line-height: 80%;
+   text-align: center;
+   min-width: 100px;
+   margin: 1%;
+   margin-top: 1%;
+   margin-bottom: 3%;
+}
+
+.desc{
+    margin-bottom: 5%;
+}
+
+@media(max-width:1400px){
+    .container p{
+        font-size: 40px;
+    }
+
+    .oweekLogo{
+        font-size: 70px;
+    }
+}
+
+@media(max-width:1280px){
+    .timer{
+        width: 60%;
+        top: 39%;
+        padding-top: 1%;
+        box-shadow: 2px 8px 16px rgb(255, 204, 0);
+    }
+
+    .container p{
+        font-size: 40px;
+    }
+
+    .oweekLogo{
+        font-size: 70px;
+        background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+      border-radius: 15px;
+      color: rgb(255, 213, 61);
+      -webkit-text-stroke-width: 0.001px;
+      -webkit-text-stroke-color: rgb(228, 47, 30);
+      box-shadow: 5px 10px 18px rgb(255, 204, 0);
+      position: absolute;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 1%;
+      font-weight: bold;
+      top: -65%;
+    }
+}
+
+@media(max-width:1000px){
+    .timer{
+        width: 80%;
+    }
+}
+
+
+@media(max-width:768px){
+    .timer{
+        top: 43%;
+        padding-top: 2%;
+        width: 70%;
+    }
+
+    .container p{
+        font-size: 40px;
+        line-height: 20%;
+    }
+
+    .container{
+        padding: 1%;
+        min-width: 65px;
+    }
+
+    .oweekLogo{
+        font-size: 60px;
+        background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+      border-radius: 15px;
+      color: rgb(255, 213, 61);
+      -webkit-text-stroke-width: 0.001px;
+      -webkit-text-stroke-color: rgb(228, 47, 30);
+      box-shadow: 5px 10px 18px rgb(255, 204, 0);
+      position: absolute;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 1%;
+      top: -70%;
+      font-weight: bold;
+    }
+  }
+
+  @media(max-width:550px){
+
+    .timer{
+        box-shadow: 1px 4px 8px rgb(255, 204, 0);
+        width: 80%;
+    }
+    .container p{
+        font-size: 20px;
+    }
+    .container{
+        padding: 1%;
+        min-width: 45px;
+    }
+
+    .oweekLogo{
+        font-size: 35px;
+        background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+      border-radius: 15px;
+      color: rgb(255, 213, 61);
+      -webkit-text-stroke-width: 0.001px;
+      -webkit-text-stroke-color: rgb(228, 47, 30);
+      box-shadow: 5px 10px 18px rgb(255, 204, 0);
+      position: absolute;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 1%;
+      font-weight: bold;
+      top: -75%;
+    }
+  }
+
+  @media(max-width:500px){
+    .timer{
+        box-shadow: 1px 4px 8px rgb(255, 204, 0);
+        width: 90%;
+    }
+    .container p{
+        font-size: 20px;
+    }
+    .container{
+        padding: 1%;
+        min-width: 45px;
+    }
+
+    .oweekLogo{
+        font-size: 35px;
+        background-image: linear-gradient(to right, rgba(255, 209, 47, 1), rgba(253, 247, 227, 1), rgba(255, 209, 47, 1));
+      border-radius: 15px;
+      color: rgb(255, 213, 61);
+      -webkit-text-stroke-width: 0.001px;
+      -webkit-text-stroke-color: rgb(228, 47, 30);
+      box-shadow: 5px 10px 18px rgb(255, 204, 0);
+      position: absolute;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 1%;
+      font-weight: bold;
+      top: -75%;
+    }
+  }

@@ -16,7 +16,7 @@ font-family: 'ClementePDam', sans-serif;
 
 
 .bg {
-  background: url(countdownBG.PNG);
+  background: url(countdownBG.png);
   background-position: 0% 60%;
   background-size: 100% auto;
   height: 100vh;
@@ -670,7 +670,7 @@ font-family: 'ClementePDam', sans-serif;
 
 @media(max-width:640px) {
   .bg {
-    background: url(countdownBGPhone.PNG);
+    background: url(countdownBGPhone.png);
     background-size: auto 100%;
     background-position: center;
   }

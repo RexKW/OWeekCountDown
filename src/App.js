@@ -7,9 +7,9 @@ import O from './assets/Logo Oweek Putih no text.png';
 import UC from './assets/LOGO-UC-FIX-SEP-2021-01.png';
 import leaf1 from './assets/leaves left-01 .png';
 import leaf2 from './assets/leaves right 2-01.png';
-import banner from './outline banner-01.png';
+import banner from './assets/outline banner-01.png';
 import content1 from './assets/outline desktop 3-02.png';
-import content2 from './outline phone-02.png';
+import content2 from './assets/outline phone-02.png';
 import leaf3 from './assets/leaves-01.png';
 
 function App() {
@@ -51,7 +51,6 @@ function App() {
       <img src={leaf3} alt='leaf' id='leaf3' ref={parallaxRef7}/>
         <CarouselHorizontal/>
       <div className='countdownContainer'>
-        
         <Countdown className='countdown'/>
       </div>
       
